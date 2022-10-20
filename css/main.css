@@ -247,7 +247,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
+  transform: translateY(-110%);
 }
 @media (max-width: 479px) {
   .menu-container {
@@ -451,6 +451,12 @@ img {
     height: 581px;
   }
 }
+@media (max-width: 479px) {
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+}
 
 .form-title {
   font-weight: 700;
@@ -496,6 +502,11 @@ img {
     width: 448px;
   }
 }
+@media (max-width: 479px) {
+  .form-field input {
+    width: auto;
+  }
+}
 
 .form-input:focus {
   border: 1px solid #2196F3;
@@ -525,6 +536,11 @@ img {
 @media screen and (min-width: 1200px) {
   .form-textarea {
     width: 448px;
+  }
+}
+@media (max-width: 479px) {
+  .form-textarea {
+    width: auto;
   }
 }
 

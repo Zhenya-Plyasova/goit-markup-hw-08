@@ -12,6 +12,10 @@ padding: 40px;
     width: 528px;
     height: 581px;
 }
+@media (max-width: 479px) {
+    width: 90%;
+    padding: 20px;
+}
  }
 .form-title {
     font-weight: 700;
@@ -52,6 +56,9 @@ padding: 40px;
     @include desktop {
         width: 448px;
     }
+    @media (max-width: 479px) {
+    width: auto;
+    }
 }
 
 .form-input:focus {
@@ -81,6 +88,9 @@ fill: $accent-color;
     @include desktop {
         width: 448px;
     }
+           @media (max-width: 479px) {
+               width: auto;
+           }
 }
 
 .form-textarea:focus-within {
