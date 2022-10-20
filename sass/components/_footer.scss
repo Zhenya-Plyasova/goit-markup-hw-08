@@ -1,0 +1,240 @@
+.footer {
+background-color: $temp-color;
+height: 603px;
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        height: 463px;
+        padding-left: 82px;
+        padding-right: 82px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        height: 252px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.footer__links .link {
+    color: $back-color;
+    letter-spacing: 0.03em;
+    line-height: 1.71;
+    font-weight: 400;
+    font-style: normal;  
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
+}
+
+.footer__links {
+    margin-top: 20px;
+}
+
+
+.footer__links .contact {
+    color: rgba(255, 255, 255, 0.6);
+    
+}
+@media (max-width: 1199px) {
+    .footer__links .contact {
+    text-align: center;
+    justify-content: center;
+    }
+}
+
+
+.footer__container {
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+.footer__container {
+    display: flex;
+}
+}
+
+.footer__list {
+display: flex;
+@extend %centered;
+align-items: center;
+flex-wrap: wrap;
+justify-content: center;
+}
+@media (min-width: 768px) {
+    .footer__list {
+flex-direction: row;
+justify-content: space-between;
+align-items: baseline;
+    }
+}
+
+@include desktop {
+.footer__list {
+flex-wrap: nowrap;
+}
+}
+
+.footer__block {
+    text-align: center;
+    margin-bottom: 60px;
+    flex-basis: 100%;
+   }
+@include tablet {
+.footer__block {
+     flex-basis: 35%;
+ }
+ }
+
+ 
+@include desktop {
+    .footer__block {
+        text-align: left;
+
+
+        flex-basis: auto;
+    }
+}
+
+.contacts__item {
+            margin-bottom: 8px;
+            
+            @include desktop {
+                margin-bottom: 9px;
+            }
+            &:last-child {
+                    margin-bottom: 0;
+                }
+        }
+    
+.address {
+    display: block;
+
+}
+.footer__social {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.footer__title {
+    color: $back-color;
+    @include text(14px, 700, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+@include desktop {
+.footer__block:first-child {
+        margin-right: 90px;
+    }
+}
+
+
+.social__link--footer{
+    color: $back-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    @extend %animation;
+}
+
+.social__item:last-child {
+    margin-right: 0;
+}
+
+.social__link:hover,
+.social__link:focus {
+    background-color: $accent-color;
+}
+
+@media (max-width: 1199px) {
+.signup {
+    margin-left: auto;
+    margin-right: auto;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ }
+}
+
+.signup__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@include desktop {
+     .signup__form {
+         flex-direction: row;
+     }
+     .signup {
+         margin-left: 90px;
+ }
+}
+
+.signup__window {
+width: 450px;
+height: 50px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+background-color: $temp-color;
+color: $back-color;
+margin-bottom: 20px;
+margin-top: 20px;
+padding-left: 16px;
+justify-content: center;
+outline: none;
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0.03em;
+&:focus {
+        border: 1px solid $accent-color;
+    }
+}
+
+@include desktop {
+    .signup__window {
+        width: 358px;
+        margin-right: 12px;
+    }
+}
+@media (max-width: 478px) {
+    .signup__window {
+            width: calc(100% - 30px);
+        }
+}
+
+.signup__btn {
+    @include button(200px, auto, inline-flex, rgba(0, 0, 0, 0.15));
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    @extend %animation;
+    &:hover,
+    &:focus {
+            background-color: $active-color;
+        }
+}
+@include desktop {
+.signup__btn {
+    width: 200px;
+}
+}
+
+.signup__icon {
+    fill: currentColor;
+    margin-left: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+}

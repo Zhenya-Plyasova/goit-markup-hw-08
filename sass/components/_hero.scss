@@ -1,0 +1,89 @@
+ .hero {
+     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/Header_mobile_img.jpg");
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     padding-bottom: 118px;
+     padding-top: 118px;
+     
+     @extend %centered;
+     @include desktop {
+        padding-bottom: 200px;
+            padding-top: 200px;
+            max-width: 1600px;
+     }
+ }
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../img/Header_mobile_img@2x.jpg");
+    }
+}
+
+@media (min-width: 480px) {
+    .hero {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url("../img/Header_tablet_img.jpg");
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                            url("../img/Header_tablet_img@2x.jpg");
+                }
+        }
+}
+
+@include tablet {
+    .hero {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url("../img/Img-hero.jpg");
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url("../img/Img-hero@2x.jpg");
+            }
+        }
+}
+
+.hero .hero-title {
+    color: $back-color;
+    text-transform: uppercase;
+    text-align: Center;
+    @extend %centered;
+    letter-spacing: 0.06em;
+    @include text(26px, 900, 1.62);
+    width: 360px;
+@include desktop {
+    font-size: 44px;
+    width: 696px;
+    line-height: 1.36;
+}
+ }
+
+
+.button {
+    @include button(200px, auto, block, rgba(0, 0, 0, 0.25));
+    @extend %animation;
+    margin-top: 30px;
+    @media (min-width: 1200px) {
+        width: 216px;
+    }
+}
+
+// .hero .button:active {
+//     background-color: $active-color;
+// }
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}

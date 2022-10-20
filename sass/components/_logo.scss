@@ -1,0 +1,23 @@
+.logo {
+ color: $accent-color;
+ text-decoration: none;
+    font-family: "raleway", sans-serif;
+    letter-spacing: 0.03em;
+    @include text(24px, 700, 1.17);
+
+
+    &__label--header {
+            color: #000;
+        }
+    
+    &__label--footer {
+            color: $back-color;
+        }
+
+        @media screen and (min-width: 1200px) {
+        @include text(26px, 700, 1.19);
+        margin: 0;
+        }
+}
+
+        

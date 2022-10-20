@@ -1,0 +1,193 @@
+ .modal {
+width: 450px;
+height: 609px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+background: #FFFFFF;
+display: flexbox;
+padding: 40px;
+@media (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+}
+ }
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+    margin-bottom: 12px;
+    @include desktop {
+        line-height: 1.15;
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-field label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $primary-color;
+    margin-bottom: 4px;
+}
+
+.form-field input {
+    width: 370px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    outline: none;
+    cursor:text;
+    @include desktop {
+        width: 448px;
+    }
+}
+
+.form-input:focus {
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+}
+
+.form-input:focus ~ svg {
+fill: $accent-color;
+}
+
+.form-icon {
+    position: absolute;
+    fill: inherit;
+    top: 50%;
+    left: 12px;
+}
+
+.form-textarea {
+    width: 370px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    padding: 12px 16px;
+    @include desktop {
+        width: 448px;
+    }
+}
+
+.form-textarea:focus-within {
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+}
+
+.form-textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    @include desktop {
+            font-size: 12px;
+        }
+}
+
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-icon {
+    width: 15px;
+    height: 15px;
+    border: 2px solid $secondary-color;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 8px;
+
+    @include desktop {
+            margin-right: 7px;
+        }
+}
+
+.checkbox:checked ~ .checkbox-icon {
+background-color: $accent-color;
+background-image: url(../img/icon-check.svg);
+background-position: 50% 50%; 
+background-size: contain;
+background-repeat: no-repeat;
+border-color: transparent;
+}
+
+.policy-link {
+    color: $accent-color;
+    text-decoration: none;
+    border-bottom: 1px solid $accent-color;
+}
+
+.contact-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: $back-color;
+    background-color: $accent-color;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: Center;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+background-color: $active-color;
+}
+
+ .is-hidden {
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
+ }
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    left: 412px;
+    width: 30px;
+    height: 30px;
+    background-color: $back-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include desktop {
+        left: 490px;
+        }
+}
+
+.close-button:hover,
+.close-button:focus {
+    fill: $accent-color;
+}

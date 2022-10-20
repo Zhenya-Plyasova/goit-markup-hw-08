@@ -1,0 +1,105 @@
+html {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+ 
+    margin: 0;
+}
+
+body {
+    color: $primary-color;
+    font-family: "roboto", sans-serif;
+
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+img {
+    display: block;
+}
+
+.link {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    @extend %animation;
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
+
+}
+
+.current {
+    color: $accent-color;
+    position: relative;
+}
+
+.container {
+    align-items: center;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media screen and (min-width: 768px) {
+    max-width: 768px;
+   
+    }
+         @media screen and (min-width: 1200px) {
+             max-width: 1200px;
+         }
+}
+
+.section {
+    flex-wrap: wrap;
+    align-items: center;
+    @extend %centered;
+    padding: 60px 0;
+
+    @include desktop {
+        padding: 94px 0px;
+    }
+}
+
+.social__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    @extend %animation;
+    &:hover,
+    &:focus {
+            color: $back-color;
+            background-color: $accent-color;
+        }
+}
+
+.social__item {
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social__icon {
+    fill: currentColor;
+}
