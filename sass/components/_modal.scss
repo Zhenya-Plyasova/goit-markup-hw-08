@@ -195,6 +195,9 @@ background-color: $active-color;
     @include desktop {
         left: 490px;
         }
+     @media (max-width: 479px) {
+        left: (90%);
+      }
 }
 
 .close-button:hover,
