@@ -34,6 +34,9 @@
         @media screen and (min-width: 768px) and (max-width: 1199px){
             display: block;
             margin-left: 96px;
+        & .item {
+                margin-right: 0;
+            }
         }
      @media screen and (min-width: 1200px) {
         display: flex;
@@ -48,7 +51,11 @@
      @extend %animation;
  }
  }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .item .link {
+        font-size: 12px;
+    }
+}
 .header-contacts .link:hover {
     color: $accent-color;
 }

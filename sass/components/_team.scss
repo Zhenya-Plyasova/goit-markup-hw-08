@@ -39,6 +39,13 @@
         margin-right: auto;
     }
 }
+@media (max-width: 479px) {
+.team__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 1199px) {
     .team__list {
@@ -76,9 +83,7 @@
 
 .team__card {
    padding: 30px 10px;
-   
-   
-//    width: 450px;
+
 }
 
 .team__text {
@@ -99,12 +104,12 @@
     transition-property: color, background-color;
     }
 
-.social__item {
-    margin-right: 10px;
-    &:last-child {
-            margin-right: 0;
-        }
-}
+// .social__item {
+//     margin-right: 10px;
+//     &:last-child {
+//             margin-right: 0;
+//         }
+// }
 
 .social__link:hover,
 .social__link:focus {

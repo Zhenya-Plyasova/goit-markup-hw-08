@@ -93,11 +93,8 @@ img {
         }
 }
 
-.social__item {
+.social__item:not(:last-child) {
     margin-right: 10px;
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
 .social__icon {
