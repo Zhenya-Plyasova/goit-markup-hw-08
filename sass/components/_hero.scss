@@ -4,6 +4,7 @@
      background-position: 50% 50%;
      padding-bottom: 118px;
      padding-top: 118px;
+    background-size: cover;
      
      @include desktop {
         padding-bottom: 200px;
@@ -18,6 +19,7 @@
     .hero {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url("../img/Header_mobile_img@2x.jpg");
+            
     }
 }
 
