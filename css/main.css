@@ -3,7 +3,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer__list, .advantages__list, .hero .hero-title, .section {
+.footer__list, .advantages__list, .hero .hero-title, .hero, .section {
   margin-left: auto;
   margin-right: auto;
 }
@@ -173,27 +173,27 @@ img {
     display: block;
     margin-left: 96px;
   }
-  .header-contacts .item {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header-contacts {
-    display: flex;
-    margin-left: auto;
-  }
-}
-.header-contacts .item:not(:last-child) {
-  margin-right: 50px;
 }
 .header-contacts .link {
   color: #757575;
   transition-property: background-color;
 }
 
+@media screen and (min-width: 1200px) {
+  .header-contacts {
+    display: flex;
+    margin-left: auto;
+  }
+  .header-contacts .item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .item .link {
     font-size: 12px;
+  }
+  .header-contacts .item {
+    margin-right: 0;
   }
 }
 .header-contacts .link:hover {

@@ -34,16 +34,9 @@
         @media screen and (min-width: 768px) and (max-width: 1199px){
             display: block;
             margin-left: 96px;
-        & .item {
-                margin-right: 0;
-            }
+        
         }
-     @media screen and (min-width: 1200px) {
-        display: flex;
-      margin-left: auto;}
-     & .item:not(:last-child) {
-         margin-right: 50px;
-     }
+
          
   & .link {
      color: $primary-color;
@@ -51,9 +44,22 @@
      @extend %animation;
  }
  }
+@media screen and (min-width: 1200px) {
+    .header-contacts {
+             display: flex;
+             margin-left: auto;
+         }
+    
+        .header-contacts .item:not(:last-child) {
+             margin-right: 50px;
+         }
+        }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .item .link {
         font-size: 12px;
+    }
+    .header-contacts .item {
+        margin-right: 0;
     }
 }
 .header-contacts .link:hover {
